@@ -19,3 +19,7 @@ import SwiftUI
     var timer   = Timer()
     let seconds = 1
     let minutes = 60
+
+//    MARK: - Calendar
+
+let calendar = Calendar.current
