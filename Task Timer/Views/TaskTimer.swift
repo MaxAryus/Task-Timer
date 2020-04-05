@@ -13,16 +13,16 @@ struct TaskTimer: View {
     
 //    MARK: - Properties
     
-    @Binding var showSlider: Bool
+    @State var sliderValue: Double = 5.0
+    @State var showSlider: Bool = true
     
-    @State var timerPaused: Bool = true
     
-    @State var displayTime: Double = 0.0
-    @State var beginningTime: Int = 0
-    @State var countDownTime: Int = 0
-    @State var runTimer: Bool = false
-       
-    
+    @State var currentDate: Date?
+    @State var timerIsRunning: Bool = false
+    @State var label: Int = 5
+    @State var beginningDate: Date?
+    @State var endDate: Date?
+    @State var minutesLeft: Int?
 //    MARK: - Content
     
     var body: some View {
@@ -37,7 +37,7 @@ struct TaskTimer: View {
                                 Circle()
                                     .stroke(green, lineWidth: 4)
                         ).foregroundColor(.white)
-                        Text("\(Int(self.displayTime))")
+                        Text("\(self.timerIsRunning ? self.label : Int(self.sliderValue))")
                             .font(.custom("Nunito-Bold", size: 40)).foregroundColor(gray)
                     }
                     
@@ -46,107 +46,102 @@ struct TaskTimer: View {
 //  Touchgesture for hiding the slider
                 .gesture(TapGesture(count: 2)
                     .onEnded({ (_) in
-                        if (self.runTimer == true || self.timerPaused == true && self.showSlider == false) {
-                            self.willDeleteCountDown()
+                        // ShowSlider, deleteTimer
+                        if self.timerIsRunning == false {
+                            self.showSlider.toggle()
+                        } else if self.timerIsRunning == true {
+                            self.deleteCountDown()
                         }
-//                        else if self.runTimer == false {
-//                            self.showSlider.toggle()
-//                        }
-                    }))
+
+                    })
+            )
                 
 //  Touchgesture for starting and stopping the Countdown
                     .gesture(TapGesture(count: 1)
                         .onEnded({ (_) in
-                            if (self.runTimer == false && self.displayTime > 0) {
-                                self.runTimer = true
-                                self.willStartTimer()
-                                self.showSlider = false
-                                self.timerPaused = false
-                                
-                                print("timer started: \(Date())")
-                                
-                            } else if self.runTimer == true && self.timerPaused == false {
-                                
-                                self.willPauseTimer()
-                                
-                                print("timer paused")
-                                
-                            }
-                            
+                           // Start, Pause timer
+                            self.timerIsRunning.toggle()
+                            self.startTimer()
                         })
                 )
                 
-
-
-//  Slider value witt stepping with 5
+//  Slider value stepping with 5
             HStack {
-                if (self.showSlider == true) {
-                    Slider(value: $displayTime, in: 0...120, step: 5).padding([.leading, .trailing], 20)
+                if showSlider {
+                    Slider(value: $sliderValue, in: 5...60, step: 5).padding([.leading, .trailing], 20).background(shadow(radius: 6))
                 }
+                
             }
         }
     }
 //    MARK: - Functions
     
-    func willStartTimer() {
-        if self.runTimer == true {
-            startTimer()
-        }
-        
-    }
-    
-    func willPauseTimer() {
-        if self.runTimer == true {
-            timer.invalidate()
-            self.timerPaused = true
-            self.runTimer = false
-        }
-    }
-    
-    func willDeleteCountDown() {
+    func deleteCountDown() {
         timer.invalidate()
-        self.countDownTime  = 0
-        self.runTimer       = false
-        self.displayTime    = 0.0
+        self.minutesLeft = 0
+        self.timerIsRunning = false
         self.showSlider     = true
-        print("timer deleted")
+        
     }
     
     func countDown() {
-        if self.countDownTime > 0 {
-            self.countDownTime -= 1
+        if self.minutesLeft! < 0 {
+            self.label = self.minutesLeft! * (-1)
         } else {
-            self.runTimer = false
             timer.invalidate()
+            self.timerIsRunning = false
             self.showSlider = true
-            print("timer endet: \(Date())")
         }
-        self.displayTime -= 1
         
     }
+    
     
     func startTimer() {
-            self.countDownTime = Int(self.displayTime) - 1
-            self.beginningTime = self.countDownTime
+        
+        if timerIsRunning {
+            self.showSlider = false
             
-            timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(seconds), repeats: true, block: { (i) in
-                self.countDown()
+            let date = NSDate()
+            let components = calendar.dateComponents([.hour, .minute,], from: date as Date)
+            self.beginningDate = calendar.date(from: components)
+            
+            self.endDate = calendar.date(byAdding: .minute, value: Int(sliderValue), to: self.beginningDate!)
+            
+        timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(seconds * 30), repeats: true, block: { (_) in
                 
+                let date = NSDate()
+                let components = calendar.dateComponents([.hour, .minute], from: date as Date)
+                self.currentDate = calendar.date(from: components)
+                
+                let difference = calendar.dateComponents([.hour, .minute], from: self.endDate! as Date, to: self.currentDate!)
+                
+
+                
+                var hoursLeft = difference.hour
+                self.minutesLeft = difference.minute
+                                
+                if hoursLeft! > 0 {
+                    hoursLeft! -= 1
+                    self.minutesLeft! += 60
+                }
+                
+                self.countDown()
             })
-        
-        
-        
+            
+        }
+          
     }
     
-    
-    
 }
+
+
 
 
 //      MARK: - Preview
 
 struct TaskTimer_Previews: PreviewProvider {
     static var previews: some View {
-        TaskTimer(showSlider: .constant(true))
+        TaskTimer()
     }
 }
+
