@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E4607C0A2438FFF80043C730 /* TimerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4607C092438FFF80043C730 /* TimerClass.swift */; };
 		E4A9A5D024369FEA00F0A2E9 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A9A5CD24369FEA00F0A2E9 /* Nunito-Bold.ttf */; };
 		E4A9A5D124369FEA00F0A2E9 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A9A5CE24369FEA00F0A2E9 /* Nunito-ExtraLight.ttf */; };
 		E4A9A5D224369FEA00F0A2E9 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A9A5CF24369FEA00F0A2E9 /* Nunito-SemiBold.ttf */; };
@@ -43,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E4607C092438FFF80043C730 /* TimerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerClass.swift; sourceTree = "<group>"; };
 		E4A9A5CD24369FEA00F0A2E9 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Bold.ttf"; path = "../../../../Downloads/Nunito/Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		E4A9A5CE24369FEA00F0A2E9 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-ExtraLight.ttf"; path = "../../../../Downloads/Nunito/Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 		E4A9A5CF24369FEA00F0A2E9 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-SemiBold.ttf"; path = "../../../../Downloads/Nunito/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 			children = (
 				E4C37EC32436631F004D4F95 /* ContentView.swift */,
 				E4D3F6392438B616005F7C1E /* TaskTimer.swift */,
-				E4607C092438FFF80043C730 /* TimerClass.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,7 +325,6 @@
 			files = (
 				E4C37EBD2436631F004D4F95 /* AppDelegate.swift in Sources */,
 				E4D3F6382438AAFD005F7C1E /* ViewRouter.swift in Sources */,
-				E4607C0A2438FFF80043C730 /* TimerClass.swift in Sources */,
 				E4C37F0624366769004D4F95 /* Costume.swift in Sources */,
 				E4C37EC22436631F004D4F95 /* Task_Timer.xcdatamodeld in Sources */,
 				E4D3F63A2438B616005F7C1E /* TaskTimer.swift in Sources */,
