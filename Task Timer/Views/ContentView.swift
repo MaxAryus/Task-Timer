@@ -51,7 +51,7 @@ struct ContentView: View {
                 }
             }.padding(.top)
             
-            TaskTimer(showSlider: $showSlider)
+            TaskTimer()
             
             Spacer()
             HStack {
