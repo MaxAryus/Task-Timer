@@ -20,7 +20,6 @@
 		E4C37ED724366322004D4F95 /* Task_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37ED624366322004D4F95 /* Task_TimerTests.swift */; };
 		E4C37EE224366322004D4F95 /* Task_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37EE124366322004D4F95 /* Task_TimerUITests.swift */; };
 		E4C37F0624366769004D4F95 /* Costume.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37F0524366769004D4F95 /* Costume.swift */; };
-		E4D3F6382438AAFD005F7C1E /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D3F6372438AAFD005F7C1E /* ViewRouter.swift */; };
 		E4D3F63A2438B616005F7C1E /* TaskTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D3F6392438B616005F7C1E /* TaskTimer.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,6 @@
 		E4C37EE124366322004D4F95 /* Task_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_TimerUITests.swift; sourceTree = "<group>"; };
 		E4C37EE324366322004D4F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C37F0524366769004D4F95 /* Costume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Costume.swift; sourceTree = "<group>"; };
-		E4D3F6372438AAFD005F7C1E /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		E4D3F6392438B616005F7C1E /* TaskTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				E4C37F0524366769004D4F95 /* Costume.swift */,
-				E4D3F6372438AAFD005F7C1E /* ViewRouter.swift */,
 			);
 			name = Costumaization;
 			sourceTree = "<group>";
@@ -324,7 +321,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C37EBD2436631F004D4F95 /* AppDelegate.swift in Sources */,
-				E4D3F6382438AAFD005F7C1E /* ViewRouter.swift in Sources */,
 				E4C37F0624366769004D4F95 /* Costume.swift in Sources */,
 				E4C37EC22436631F004D4F95 /* Task_Timer.xcdatamodeld in Sources */,
 				E4D3F63A2438B616005F7C1E /* TaskTimer.swift in Sources */,
