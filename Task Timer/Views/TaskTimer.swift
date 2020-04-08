@@ -11,6 +11,7 @@ import SwiftUI
 struct TaskTimer: View {
     
 //    MARK: - Properties
+    @Binding var workedTime: Int
     
     @State var sliderValue: Double = 5.0
     @State var showSlider: Bool = true
@@ -20,6 +21,9 @@ struct TaskTimer: View {
     @State private var endDate: Date?
     @State private var minutesleft: Int?
     @State private var timerIsRunning: Bool = false
+    @State private var upcommingWorkingTime: Int?
+    
+    @State private var timerDeleted: Bool = false
     
     
     var body: some View {
@@ -36,12 +40,14 @@ struct TaskTimer: View {
                 }
             }.padding()
 //  Touchgesture Double Tap -> Show/ hide Slider, if timer is Running Delete Timer
+                
                 .gesture(TapGesture(count: 2)
                     .onEnded({ (_) in
                         if self.timerIsRunning {
-                            print("Countdown Delete")
+                            self.delteTimer()
                         } else if self.timerIsRunning == false {
                             self.showSlider.toggle()
+                            self.timerDeleted = false
                         }
                     })
             )
@@ -49,15 +55,29 @@ struct TaskTimer: View {
                 .gesture(TapGesture(count: 1)
                     .onEnded({ (_) in
                         self.timerIsRunning.toggle()
+                        self.timerDeleted = false
                         self.statTimer()
                     })
             )
             
 //  SliderView
             HStack {
+                if self.timerDeleted {
+                    Text("Timer deleted")
+                        .font(.custom("Nunito-ExtraLight", size: 15)).foregroundColor(.red)
+                    
+                    .background(green).cornerRadius(10)
+                }
+
+            }.frame(width: 250, height: 10, alignment: .center)
+            HStack {
                 if showSlider {
                     Slider(value: $sliderValue, in: 5.0...60.0, step: 5.0)
+                } else if self.timerIsRunning {
+                    Text("Timer is running keep working").padding([.leading, .trailing], 20)
+                        .font(.custom("Nunito-ExtraLight", size: 15)).foregroundColor(gray).background(green).cornerRadius(5).shadow(color: gray, radius: 6, x: 0, y: 3)
                 }
+                
             }.padding([.trailing, .leading], 20)
             
         }
@@ -68,7 +88,7 @@ struct TaskTimer: View {
     func statTimer() {
         if timerIsRunning {
             self.showSlider = false
-            
+            self.upcommingWorkingTime = Int(self.sliderValue)
             let date = NSDate()
             let components = calendar.dateComponents([.hour, .minute,], from: date as Date)
             
@@ -105,11 +125,22 @@ struct TaskTimer: View {
             self.sliderValue = Double(self.minutesleft!)
         } else {
             timer.invalidate()
+            self.sliderValue = 5
             self.timerIsRunning = false
             self.showSlider = true
+            self.workedTime += self.upcommingWorkingTime!
         }
     }
     
+    
+    func delteTimer() {
+        timer.invalidate()
+        self.timerIsRunning = false
+        self.minutesleft = 0
+        self.sliderValue = 5
+        self.showSlider = true
+        self.timerDeleted = true
+    }
     
 }
 
@@ -120,6 +151,6 @@ struct TaskTimer: View {
 
 struct TaskTimer_Preview: PreviewProvider {
     static var previews: some View {
-        TaskTimer()
+        TaskTimer(workedTime: .constant(0))
     }
 }
