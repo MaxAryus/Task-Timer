@@ -23,3 +23,7 @@ import SwiftUI
 //    MARK: - Calendar
 
 let calendar = Calendar.current
+
+//    MARK: - Lists
+
+let rowHight: CGFloat = 40
