@@ -10,8 +10,9 @@ import SwiftUI
 
 struct TaskTimer: View {
     
-//    MARK: - Properties
-    @Binding var workedTime: Int
+//  MARK: - Properties
+    @State var workedTime: Int = UserDefaults.standard.integer(forKey: "workedTime")
+    @Binding var showMenu: Bool
     
     @State var sliderValue: Double = 5.0
     @State var showSlider: Bool = true
@@ -25,9 +26,26 @@ struct TaskTimer: View {
     
     @State private var timerDeleted: Bool = false
     
-    
+//  MARK: - View
     var body: some View {
         VStack {
+            HStack (alignment: .bottom) {
+                Button(action: {
+                    withAnimation {
+                        self.showMenu.toggle()
+                    }
+                }) {
+                    MenuButton()
+                }
+                
+                Spacer()
+                Text("\(workedTime) Minutes \n worked today")
+                    .multilineTextAlignment(.center)
+                    .lineLimit(3)
+                    .padding(.trailing)
+                    .font(.custom("Nunito-SemiBold", size: 11))
+                    .shadow(color: .gray, radius: 6, x: 0, y: 3)
+            }
             HStack {
                 ZStack {
                     Circle()
@@ -129,6 +147,7 @@ struct TaskTimer: View {
             self.timerIsRunning = false
             self.showSlider = true
             self.workedTime += self.upcommingWorkingTime!
+            UserDefaults.standard.set(self.workedTime, forKey: "workedTime")
         }
     }
     
@@ -151,6 +170,7 @@ struct TaskTimer: View {
 
 struct TaskTimer_Preview: PreviewProvider {
     static var previews: some View {
-        TaskTimer(workedTime: .constant(0))
+        TaskTimer(workedTime: 0, showMenu: .constant(false))
     }
 }
+
