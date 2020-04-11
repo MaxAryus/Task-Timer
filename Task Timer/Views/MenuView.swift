@@ -13,34 +13,34 @@ struct MenuView: View {
         VStack(alignment: .leading) {
             HStack {
                 Image(systemName: "person")
-                    .foregroundColor(gray)
+                    .foregroundColor(green)
                     .imageScale(.large)
                 Text("Profile")
-                    .foregroundColor(gray)
+                    .foregroundColor(green)
                     .font(.custom("Nunito-SemiBold", size: 20))
             }.padding(.top, 100)
             HStack {
-                Image(systemName: "envelope")
-                    .foregroundColor(gray)
+                Image(systemName: "calendar")
+                    .foregroundColor(green)
                     .imageScale(.large)
-                Text("Messages")
-                    .foregroundColor(gray)
+                Text("Statistics")
+                    .foregroundColor(green)
                     .font(.custom("Nunito-SemiBold", size: 20))
             }.padding(.top, 30)
             HStack {
                 Image(systemName: "gear")
-                    .foregroundColor(gray)
+                    .foregroundColor(green)
                     .imageScale(.large)
                 Text("Settings")
-                    .foregroundColor(gray)
+                    .foregroundColor(green)
                     .font(.custom("Nunito-SemiBold", size: 20))
             }.padding(.top, 30)
             Spacer()
         }
     .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(black)
-         .edgesIgnoringSafeArea(.all)
+        .background(gray)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
