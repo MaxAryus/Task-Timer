@@ -63,8 +63,12 @@ class DataManager {
             
             for tk in fetchTasks {
                 context.delete(tk)
+                do {
+                    try context.save()
+                } catch let error as NSError {
+                    print(error)
+                }
             }
-            
         } catch let error as NSError {
             print(error)
         }

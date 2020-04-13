@@ -10,25 +10,43 @@ import SwiftUI
 
 struct AddTaskSheet: View {
     
-    @State var newTitle = ""
+    @State var edetingMode: Bool = false
+    
+    @State var newTitle: String = ""
     @Binding var showAddTaskSheet: Bool
     var onSave:(_ success: Bool) -> Void
     
     var body: some View {
-        VStack {
-            HStack {
-                TextField("Add Task", text: self.$newTitle)
-                Spacer()
-                Button(action: {
-                    self.saveTask()
-                    print(DataManager.shared.getTasks().count)
-                }) {
-                    Image(systemName: "square")
-                }
-            }
-        }.padding()
-        
+        ZStack {
+            VStack {
+                HStack {
+                    TextField("Some text", text: self.$newTitle, onEditingChanged: {
+                        edit in
+                        if edit {
+                            self.edetingMode = true
+                        } else {
+                            self.edetingMode = false
+                        }
+                    })
+                        .background(Color.white)
+                        .padding([.bottom,.top], 10)
+                        .multilineTextAlignment(.leading).padding(.leading)
+                }.background(Color.white).cornerRadius(40).padding([.leading,.trailing], 20)
+                    .padding(.bottom, 30).shadow(color: gray, radius: 3, x: 0, y: 3).padding(.top, 20)
+                HStack {
+                    Button(action: {
+                        self.saveTask()
+                    }) {
+                        Text("Add task")
+                            .foregroundColor(gray)
+                            .multilineTextAlignment(.center)
+                    }
+                }.padding([.leading,.trailing], 30).padding(.bottom, 5).padding(.top, 5).background(green).cornerRadius(60).shadow(color: gray, radius: 3, x: 0, y: 3)
+                    Spacer()
+            }.background(blue).edgesIgnoringSafeArea(.all).frame(height: 235).cornerRadius(20).padding(.top, 250).padding(.bottom, -45)
+        }.offset(y: edetingMode ? -300 : 0).animation(.default)
     }
+            
     
     func saveTask() {
         guard self.newTitle != "" else {
@@ -43,14 +61,6 @@ struct AddTaskSheet: View {
             self.onSave(true)
         }
         
-        
-        
     }
     
 }
-//
-//struct AddTaskSheet_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddTaskSheet(showAddTaskSheet: .constant(false))
-//    }
-//}

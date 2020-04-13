@@ -24,7 +24,7 @@ class ListViewModel: ObservableObject {
             return TaskViewModel(id: task.id!, title: task.title!, finished: task.finished)
             
         })
-        print(self.tasks)
+//        print(self.tasks)
     }
     
     func deleteTask(id: UUID) {
