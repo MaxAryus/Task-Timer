@@ -56,7 +56,7 @@ class DataManager {
     func deleteTasks(id: UUID) {
         let fetchRequest: NSFetchRequest<Tasks> = Tasks.fetchRequest()
         
-        fetchRequest.predicate = NSPredicate.init(format: "id@%", id.uuidString)
+        fetchRequest.predicate = NSPredicate.init(format: "id=%@", id.uuidString)
         
         do {
             let fetchTasks = try context.fetch(fetchRequest)
