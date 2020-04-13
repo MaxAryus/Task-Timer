@@ -21,7 +21,7 @@ class ListViewModel: ObservableObject {
     
     func fetchAllTasks() {
         self.tasks = DataManager.shared.getTasks().map({ (task) -> TaskViewModel in
-            return TaskViewModel(title: task.title!, finished: task.finished)
+            return TaskViewModel(id: task.id!, title: task.title!, finished: task.finished)
             
         })
         print(self.tasks)
