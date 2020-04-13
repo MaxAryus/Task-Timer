@@ -13,8 +13,8 @@ class TaskViewModel {
     var title: String
     var finished: Bool
     
-    init(title: String, finished: Bool) {
-        self.id = UUID()
+    init(id: UUID, title: String, finished: Bool) {
+        self.id = id 
         self.title = title
         self.finished = finished
     }
