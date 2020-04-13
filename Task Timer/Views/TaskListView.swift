@@ -53,12 +53,12 @@ struct TaskListView: View {
                             .foregroundColor(green)
                             .frame(width: 22, height: 22)
                     }.frame(height: rowHight)
-                }//.onDelete { (offsets) in
-//                    offsets.forEach { (index) in
-//                        let p = self.taskListVM.tasks[index]
-//                        self.taskListVM.deleteTask(id: p.id)
-//                    }
-//                }
+                }.onDelete { (offsets) in
+                    offsets.forEach { (index) in
+                        let p = self.taskListVM.tasks[index]
+                        self.taskListVM.deleteTask(id: p.id)
+                    }
+                }
             }.shadow(color: .gray, radius: 9, x: 0, y: 3)
         }
         
