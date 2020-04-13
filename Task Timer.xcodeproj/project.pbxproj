@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E43F41412443353100989E85 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F41402443353100989E85 /* ListViewModel.swift */; };
+		E43F41442443369900989E85 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F41432443369900989E85 /* TaskViewModel.swift */; };
 		E449109F244235CE00221E54 /* AddTaskSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E449109E244235CE00221E54 /* AddTaskSheet.swift */; };
 		E49D72882440A20400449E2A /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49D72872440A20400449E2A /* MenuButton.swift */; };
 		E4A305CB243D42C9007A29D6 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A305CA243D42C9007A29D6 /* MenuView.swift */; };
@@ -26,7 +28,7 @@
 		E4D3F63A2438B616005F7C1E /* TaskTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D3F6392438B616005F7C1E /* TaskTimer.swift */; };
 		E4DED33C24421A8F0030EFA4 /* NSManagedObjectContext + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DED33B24421A8F0030EFA4 /* NSManagedObjectContext + Extension.swift */; };
 		E4DED33E24421BC30030EFA4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DED33D24421BC30030EFA4 /* DataManager.swift */; };
-		E4DED34024421C730030EFA4 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DED33F24421C730030EFA4 /* TaskListViewModel.swift */; };
+		E4DED34024421C730030EFA4 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DED33F24421C730030EFA4 /* TaskListView.swift */; };
 		E4DED342244221A30030EFA4 /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DED341244221A30030EFA4 /* AddTaskViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E43F41402443353100989E85 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		E43F41432443369900989E85 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		E449109E244235CE00221E54 /* AddTaskSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskSheet.swift; sourceTree = "<group>"; };
 		E49D72872440A20400449E2A /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		E4A305CA243D42C9007A29D6 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -73,7 +77,7 @@
 		E4D3F6392438B616005F7C1E /* TaskTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTimer.swift; sourceTree = "<group>"; };
 		E4DED33B24421A8F0030EFA4 /* NSManagedObjectContext + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext + Extension.swift"; sourceTree = "<group>"; };
 		E4DED33D24421BC30030EFA4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		E4DED33F24421C730030EFA4 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		E4DED33F24421C730030EFA4 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		E4DED341244221A30030EFA4 /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E43F4142244335A400989E85 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E43F41402443353100989E85 /* ListViewModel.swift */,
+				E43F41432443369900989E85 /* TaskViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		E4C37EB02436631F004D4F95 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +141,7 @@
 				E4C37ECD24366322004D4F95 /* Info.plist */,
 				E4D3F6342438AA8C005F7C1E /* App launch */,
 				E4DED33A24421A070030EFA4 /* Helper */,
+				E43F4142244335A400989E85 /* ViewModels */,
 				E4D3F6352438AA99005F7C1E /* Views */,
 				E4D3F6362438AAAB005F7C1E /* Costumaization */,
 				E4C37EFE243665EB004D4F95 /* Font */,
@@ -190,7 +204,7 @@
 				E4C37EC32436631F004D4F95 /* ContentView.swift */,
 				E4D3F6392438B616005F7C1E /* TaskTimer.swift */,
 				E4A305CA243D42C9007A29D6 /* MenuView.swift */,
-				E4DED33F24421C730030EFA4 /* TaskListViewModel.swift */,
+				E4DED33F24421C730030EFA4 /* TaskListView.swift */,
 				E449109E244235CE00221E54 /* AddTaskSheet.swift */,
 			);
 			path = Views;
@@ -351,7 +365,8 @@
 			files = (
 				E4DED33C24421A8F0030EFA4 /* NSManagedObjectContext + Extension.swift in Sources */,
 				E4DED342244221A30030EFA4 /* AddTaskViewModel.swift in Sources */,
-				E4DED34024421C730030EFA4 /* TaskListViewModel.swift in Sources */,
+				E43F41412443353100989E85 /* ListViewModel.swift in Sources */,
+				E4DED34024421C730030EFA4 /* TaskListView.swift in Sources */,
 				E4DED33E24421BC30030EFA4 /* DataManager.swift in Sources */,
 				E4C37EBD2436631F004D4F95 /* AppDelegate.swift in Sources */,
 				E4C37F0624366769004D4F95 /* Costume.swift in Sources */,
@@ -361,6 +376,7 @@
 				E4D3F63A2438B616005F7C1E /* TaskTimer.swift in Sources */,
 				E449109F244235CE00221E54 /* AddTaskSheet.swift in Sources */,
 				E4C37EC42436631F004D4F95 /* ContentView.swift in Sources */,
+				E43F41442443369900989E85 /* TaskViewModel.swift in Sources */,
 				E4C37EBF2436631F004D4F95 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

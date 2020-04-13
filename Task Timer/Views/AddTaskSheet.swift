@@ -11,7 +11,8 @@ import SwiftUI
 struct AddTaskSheet: View {
     
     @State var newTitle = ""
-    @State var showAddTaskSheet: Bool = false
+    @Binding var showAddTaskSheet: Bool
+    var onSave:(_ success: Bool) -> Void
     
     var body: some View {
         VStack {
@@ -35,15 +36,21 @@ struct AddTaskSheet: View {
         }
         let vm = AddTaskViewModel()
         vm.title = self.newTitle
-        vm.saveTask()
-        self.newTitle = ""
-        self.showAddTaskSheet = false
+        
+        vm.saveTask{
+            self.newTitle = ""
+            self.showAddTaskSheet = false
+            self.onSave(true)
+        }
+        
+        
+        
     }
     
 }
-
-struct AddTaskSheet_Previews: PreviewProvider {
-    static var previews: some View {
-        AddTaskSheet(showAddTaskSheet: false)
-    }
-}
+//
+//struct AddTaskSheet_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddTaskSheet(showAddTaskSheet: .constant(false))
+//    }
+//}

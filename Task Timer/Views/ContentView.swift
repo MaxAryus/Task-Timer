@@ -12,6 +12,7 @@ struct ContentView: View {
 
     @State var workMinutes: Int = 0
     @State var showMenu: Bool = false
+   
     
     var body: some View {
         
@@ -44,13 +45,13 @@ struct ContentView_Previews: PreviewProvider {
 struct MainView: View {
 
     @Binding var showMenu: Bool
-    
+
     var body: some View {
         VStack {
             TaskTimer(showMenu: $showMenu)
             Spacer()
             Spacer()
-            TaskListViewModel()
+            TaskListView()
         }.edgesIgnoringSafeArea(.bottom)
     }
 }

@@ -12,7 +12,8 @@ class AddTaskViewModel {
     var title = ""
     var finished = false
     
-    func saveTask() {
+    func saveTask(saved: @escaping () -> Void) {
         DataManager.shared.saveTasks(title: self.title, finished: self.finished)
+        saved()
     }
 }
