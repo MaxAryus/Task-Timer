@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AddTaskSheet: View {
     
+    @Environment(\.colorScheme) var colorScheme
     @State var edetingMode: Bool = false
     
     @State var newTitle: String = ""
@@ -19,6 +20,7 @@ struct AddTaskSheet: View {
     var body: some View {
         ZStack {
             VStack {
+                
                 HStack {
                     TextField("Some text", text: self.$newTitle, onEditingChanged: {
                         edit in
@@ -28,23 +30,42 @@ struct AddTaskSheet: View {
                             self.edetingMode = false
                         }
                     })
-                        .background(Color.white)
+                        .padding(.leading)
                         .padding([.bottom,.top], 10)
-                        .multilineTextAlignment(.leading).padding(.leading)
-                }.background(Color.white).cornerRadius(40).padding([.leading,.trailing], 20)
-                    .padding(.bottom, 30).shadow(color: gray, radius: 3, x: 0, y: 3).padding(.top, 20)
+                        .background(colorScheme == .dark ? gray : Color.white)
+                        .cornerRadius(20)
+                        .multilineTextAlignment(.leading)
+                        .font(.custom("Nunito-SemiBold", size: 16))
+                    
+                }.padding([.trailing, .leading], 40).padding([.top, .bottom])
+                
                 HStack {
+                    
                     Button(action: {
                         self.saveTask()
                     }) {
                         Text("Add task")
                             .foregroundColor(gray)
                             .multilineTextAlignment(.center)
+                            .font(.custom("Nunito-Bold", size: 20))
                     }
-                }.padding([.leading,.trailing], 30).padding(.bottom, 5).padding(.top, 5).background(green).cornerRadius(60).shadow(color: gray, radius: 3, x: 0, y: 3)
-                    Spacer()
-            }.background(blue).edgesIgnoringSafeArea(.all).frame(height: 235).cornerRadius(20).padding(.top, 250).padding(.bottom, -45)
-        }.offset(y: edetingMode ? -300 : 0).animation(.default)
+                    
+                    
+                }.padding([.leading, .trailing], 30)
+                    .background(green).cornerRadius(60)
+                    .shadow(color: gray, radius: 3, x: 0, y: 3)
+                
+                Spacer()
+                
+            }.background(blue.opacity(0.8))
+                
+            
+        }.edgesIgnoringSafeArea(.all)
+        
+        .cornerRadius(20)
+            
+            .offset(y: edetingMode ? -150 : 55)
+            .animation(.default)
     }
             
     

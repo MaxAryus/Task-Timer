@@ -26,9 +26,9 @@ struct TaskListView: View {
                     Button(action: {
                         self.showAddTaskSheet.toggle()
                     }) {
-                        Image("AddTaskButton")
+                        Image(systemName: (self.showAddTaskSheet ? "clear.fill" : "plus.app.fill"))
                         .resizable()
-                            .frame(width: 55, height: 55).padding(.trailing, 21)
+                            .frame(width: 35, height: 35).padding(.trailing, 21)
                             .shadow(color: gray, radius: 6, x: 0, y: 3)
                             .foregroundColor(green)
                     }
@@ -57,15 +57,14 @@ struct TaskListView: View {
                 
                 
             }
-            if self.showAddTaskSheet == true {
+            if self.showAddTaskSheet {
                 
-                AddTaskSheet(showAddTaskSheet: self.$showAddTaskSheet) { (success) in
-                    if success == true {
+                AddTaskSheet(showAddTaskSheet: self.$showAddTaskSheet, onSave: { (success) in
+                    if success {
                         self.taskListVM.fetchAllTasks()
                     }
-                    
-                }.transition(.move(edge: .bottom))
-
+                }).transition(.move(edge: .bottom)).padding(.top, 100)
+                
             }
         
         }

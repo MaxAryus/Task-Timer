@@ -25,6 +25,7 @@
 		E4C37ED724366322004D4F95 /* Task_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37ED624366322004D4F95 /* Task_TimerTests.swift */; };
 		E4C37EE224366322004D4F95 /* Task_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37EE124366322004D4F95 /* Task_TimerUITests.swift */; };
 		E4C37F0624366769004D4F95 /* Costume.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37F0524366769004D4F95 /* Costume.swift */; };
+		E4CA2F522445C1ED0020A7B1 /* Testen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA2F512445C1ED0020A7B1 /* Testen.swift */; };
 		E4D3F63A2438B616005F7C1E /* TaskTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D3F6392438B616005F7C1E /* TaskTimer.swift */; };
 		E4DED33C24421A8F0030EFA4 /* NSManagedObjectContext + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DED33B24421A8F0030EFA4 /* NSManagedObjectContext + Extension.swift */; };
 		E4DED33E24421BC30030EFA4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DED33D24421BC30030EFA4 /* DataManager.swift */; };
@@ -74,6 +75,7 @@
 		E4C37EE124366322004D4F95 /* Task_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_TimerUITests.swift; sourceTree = "<group>"; };
 		E4C37EE324366322004D4F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C37F0524366769004D4F95 /* Costume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Costume.swift; sourceTree = "<group>"; };
+		E4CA2F512445C1ED0020A7B1 /* Testen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testen.swift; sourceTree = "<group>"; };
 		E4D3F6392438B616005F7C1E /* TaskTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTimer.swift; sourceTree = "<group>"; };
 		E4DED33B24421A8F0030EFA4 /* NSManagedObjectContext + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext + Extension.swift"; sourceTree = "<group>"; };
 		E4DED33D24421BC30030EFA4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				E4C37F0524366769004D4F95 /* Costume.swift */,
 				E49D72872440A20400449E2A /* MenuButton.swift */,
+				E4CA2F512445C1ED0020A7B1 /* Testen.swift */,
 			);
 			name = Costumaization;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				E4C37EC22436631F004D4F95 /* Task_Timer.xcdatamodeld in Sources */,
 				E4A305CB243D42C9007A29D6 /* MenuView.swift in Sources */,
 				E49D72882440A20400449E2A /* MenuButton.swift in Sources */,
+				E4CA2F522445C1ED0020A7B1 /* Testen.swift in Sources */,
 				E4D3F63A2438B616005F7C1E /* TaskTimer.swift in Sources */,
 				E449109F244235CE00221E54 /* AddTaskSheet.swift in Sources */,
 				E4C37EC42436631F004D4F95 /* ContentView.swift in Sources */,
