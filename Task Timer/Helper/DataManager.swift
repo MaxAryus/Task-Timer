@@ -25,7 +25,6 @@ class DataManager {
         var tasks = [Tasks]()
         
         let taskRequest: NSFetchRequest<Tasks> = Tasks.fetchRequest()
-        
         do {
             tasks = try self.context.fetch(taskRequest)
         } catch let error as NSError {
@@ -50,6 +49,8 @@ class DataManager {
         }
         
     }
+    
+    
     
 // delete tasks
     
