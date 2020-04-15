@@ -13,6 +13,8 @@ struct AddTaskSheet: View {
     @Environment(\.colorScheme) var colorScheme
     @State var edetingMode: Bool = false
     
+    
+    
     @State var newTitle: String = ""
     @Binding var showAddTaskSheet: Bool
     var onSave:(_ success: Bool) -> Void
@@ -37,7 +39,7 @@ struct AddTaskSheet: View {
                         .multilineTextAlignment(.leading)
                         .font(.custom("Nunito-SemiBold", size: 16))
                     
-                }.padding([.trailing, .leading], 40).padding([.top, .bottom])
+                    }.padding([.trailing, .leading], 40).padding([.top, .bottom]).shadow(color: gray, radius: 6, x: 0, y: 3)
                 
                 HStack {
                     
@@ -53,7 +55,7 @@ struct AddTaskSheet: View {
                     
                 }.padding([.leading, .trailing], 30)
                     .background(green).cornerRadius(60)
-                    .shadow(color: gray, radius: 3, x: 0, y: 3)
+                    .shadow(color: gray, radius: 6, x: 0, y: 3)
                 
                 Spacer()
                 
