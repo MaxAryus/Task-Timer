@@ -15,9 +15,13 @@ class ListViewModel: ObservableObject {
     @Published
     var tasks = [TaskViewModel]()
     
+    
+    
     init() {
         fetchAllTasks()
     }
+    
+    
     
     func fetchAllTasks() {
         self.tasks = DataManager.shared.getTasks().map({ (task) -> TaskViewModel in
