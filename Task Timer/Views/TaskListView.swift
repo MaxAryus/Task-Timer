@@ -25,6 +25,7 @@ struct TaskListView: View {
                     Spacer()
                     Button(action: {
                         self.showAddTaskSheet.toggle()
+                        
                     }) {
                         Image(systemName: (self.showAddTaskSheet ? "clear.fill" : "plus.app.fill"))
                         .resizable()
@@ -34,28 +35,34 @@ struct TaskListView: View {
                     }
                 }
                 .padding(.top, 10)
-                List {
-                    ForEach(self.taskListVM.tasks, id: \.id) { item in
-                        HStack {
-                            Text("\(item.title)")
-                                .font(.custom("Nunito-SemiBold", size: 22))
-                                .foregroundColor(gray)
-                                .lineLimit(2)
-                            Spacer()
-                            Image(systemName: "square")
-                                .resizable()
-                                .foregroundColor(green)
-                                .frame(width: 22, height: 22)
-                        }
-                    }.onDelete { (offsets) in
-                        offsets.forEach { (index) in
-                            let p = self.taskListVM.tasks[index]
-                            self.taskListVM.deleteTask(id: p.id)
+                
+//                HStack {
+//                    if self.taskListVM.tasks.count == -1 {
+//                        Text("No tasks 😁").background(green)
+//                    } else {
+                        List {
+                            ForEach(self.taskListVM.tasks, id: \.id) { item in
+                                HStack {
+                                    Text("\(item.title)")
+                                        .font(.custom("Nunito-SemiBold", size: 22))
+                                        .foregroundColor(gray)
+                                        .lineLimit(2)
+                                    Spacer()
+                                    Button(action: {
+                                        self.taskListVM.fetchAllTasks()
+                                        self.taskListVM.deleteTask(id: item.id)
+                                    }) {
+                                        Image(systemName: "square")
+                                            .resizable()
+                                            .foregroundColor(green)
+                                            .frame(width: 22, height: 22)
+//                                    }
+//                                }
                             }
+                            
+                        }
                     }
                 }.shadow(color: .gray, radius: 6, x: 0, y: 3)
-                
-                
             }
             if self.showAddTaskSheet {
                 
@@ -66,7 +73,6 @@ struct TaskListView: View {
                 }).transition(.move(edge: .bottom)).padding(.top, 100)
                 
             }
-        
         }
 
     }
