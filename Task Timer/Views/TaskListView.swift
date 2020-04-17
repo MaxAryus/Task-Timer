@@ -27,11 +27,13 @@ struct TaskListView: View {
                         self.showAddTaskSheet.toggle()
                         
                     }) {
-                        Image(systemName: (self.showAddTaskSheet ? "clear.fill" : "plus.app.fill"))
-                        .resizable()
-                            .frame(width: 35, height: 35).padding(.trailing, 21)
+                        Image("addTaskButton")
+                            .renderingMode(.original)
+                            .resizable()
+                            .frame(width: 45, height: 45).padding(.trailing, 21)
                             .shadow(color: gray, radius: 6, x: 0, y: 3)
                             .foregroundColor(green)
+                            .rotationEffect(Angle.init(degrees: (self.showAddTaskSheet ? 45 : 0))).animation(.spring())
                     }
                 }
                 .padding(.top, 10)
