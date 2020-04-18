@@ -14,6 +14,6 @@ get your worked time added your previous time. If you reach milestones (50 hours
 * Working wiht pop-up views
 * Diffrent types of menus
 
-<img src="ImagesForPreview/HomeScreen.png" width="200">
-<img src="ImagesForPreview/SideMenuScreen.png" width="200">
-<img src="ImagesForPreview/AddingNewTasks.png" width="200">
+<img src="ImagesForPreview/HomeScreen.png" width="200"> <img src="ImagesForPreview/SideMenuScreen.png" width="200"> <img src="ImagesForPreview/AddingNewTasks.png" width="200">
+
+
