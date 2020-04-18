@@ -20,7 +20,6 @@
 		E4C37EC22436631F004D4F95 /* Task_Timer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4C37EC02436631F004D4F95 /* Task_Timer.xcdatamodeld */; };
 		E4C37EC42436631F004D4F95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37EC32436631F004D4F95 /* ContentView.swift */; };
 		E4C37EC624366322004D4F95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C37EC524366322004D4F95 /* Assets.xcassets */; };
-		E4C37EC924366322004D4F95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C37EC824366322004D4F95 /* Preview Assets.xcassets */; };
 		E4C37ECC24366322004D4F95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C37ECA24366322004D4F95 /* LaunchScreen.storyboard */; };
 		E4C37ED724366322004D4F95 /* Task_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37ED624366322004D4F95 /* Task_TimerTests.swift */; };
 		E4C37EE224366322004D4F95 /* Task_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37EE124366322004D4F95 /* Task_TimerUITests.swift */; };
@@ -64,7 +63,6 @@
 		E4C37EC12436631F004D4F95 /* Task_Timer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task_Timer.xcdatamodel; sourceTree = "<group>"; };
 		E4C37EC32436631F004D4F95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4C37EC524366322004D4F95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E4C37EC824366322004D4F95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4C37ECB24366322004D4F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4C37ECD24366322004D4F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C37ED224366322004D4F95 /* Task TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Task TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,19 +143,10 @@
 				E4D3F6352438AA99005F7C1E /* Views */,
 				E4D3F6362438AAAB005F7C1E /* Costumaization */,
 				E4C37EFE243665EB004D4F95 /* Font */,
-				E4C37EC724366322004D4F95 /* Preview Content */,
 				E4C37EC02436631F004D4F95 /* Task_Timer.xcdatamodeld */,
 				E4C37EC524366322004D4F95 /* Assets.xcassets */,
 			);
 			path = "Task Timer";
-			sourceTree = "<group>";
-		};
-		E4C37EC724366322004D4F95 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E4C37EC824366322004D4F95 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		E4C37ED524366322004D4F95 /* Task TimerTests */ = {
@@ -335,7 +324,6 @@
 			files = (
 				E4A9A5D224369FEA00F0A2E9 /* Nunito-SemiBold.ttf in Resources */,
 				E4C37ECC24366322004D4F95 /* LaunchScreen.storyboard in Resources */,
-				E4C37EC924366322004D4F95 /* Preview Assets.xcassets in Resources */,
 				E4A9A5D024369FEA00F0A2E9 /* Nunito-Bold.ttf in Resources */,
 				E4C37EC624366322004D4F95 /* Assets.xcassets in Resources */,
 				E4A9A5D124369FEA00F0A2E9 /* Nunito-ExtraLight.ttf in Resources */,
