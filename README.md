@@ -1,7 +1,7 @@
 # TaskTimer
 
 An iOS application, where you can add your tasks and set a timer while you work on them. If the the timer is finished you
-get your worked time added your previous time. If you reach milestones (50 hours of work for example) you will get rewards
+get your worked time added your previous time. If you reach milestones (50 hours of work for example) you will get rewards.
 
 !! Still in progress !!
 
