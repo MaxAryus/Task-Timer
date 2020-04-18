@@ -14,3 +14,4 @@ get your worked time added your previous time. If you reach milestones (50 hours
 * Working wiht pop-up views
 * Diffrent types of menus
 
+![](ImagesForPreview/AddingNewTasks.png)
