@@ -57,7 +57,7 @@ struct TaskTimer: View {
                         .font(.custom("Nunito-Bold", size: 40)).foregroundColor(gray)
                 }
             }.padding()
-//  Touchgesture Double Tap -> Show/ hide Slider, if timer is Running Delete Timer
+//  Touch-gesture Double Tap -> Show/ hide Slider, if timer is Running Delete Timer
                 
                 .gesture(TapGesture(count: 2)
                     .onEnded({ (_) in
@@ -69,7 +69,7 @@ struct TaskTimer: View {
                         }
                     })
             )
-//  Touchgesture one Tap -> Start/ Stop countdown
+//  Touch-gesture one Tap -> Start/ Stop countdown
                 .gesture(TapGesture(count: 1)
                     .onEnded({ (_) in
                         self.timerIsRunning.toggle()
@@ -148,6 +148,7 @@ struct TaskTimer: View {
             self.showSlider = true
             self.workedTime += self.upcommingWorkingTime!
             UserDefaults.standard.set(self.workedTime, forKey: "workedTime")
+            self.upcommingWorkingTime = 0
         }
     }
     
@@ -159,6 +160,7 @@ struct TaskTimer: View {
         self.sliderValue = 5
         self.showSlider = true
         self.timerDeleted = true
+        self.upcommingWorkingTime = 0
     }
     
 }
