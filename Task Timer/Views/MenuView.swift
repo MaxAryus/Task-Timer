@@ -19,14 +19,18 @@ struct MenuView: View {
                     .foregroundColor(green)
                     .font(.custom("Nunito-SemiBold", size: 20))
             }.padding(.top, 100)
-            HStack {
-                Image(systemName: "calendar")
-                    .foregroundColor(green)
-                    .imageScale(.large)
-                Text("Statistics")
-                    .foregroundColor(green)
-                    .font(.custom("Nunito-SemiBold", size: 20))
-            }.padding(.top, 30)
+            Button(action: {
+                UserDefaults.standard.set(0, forKey: "workedTime")
+            }) {
+                HStack {
+                    Image(systemName: "gobackward")
+                        .foregroundColor(green)
+                        .imageScale(.large)
+                    Text("Reset time")
+                        .foregroundColor(green)
+                        .font(.custom("Nunito-SemiBold", size: 20))
+                }.padding(.top, 30)
+            }
             HStack {
                 Image(systemName: "gear")
                     .foregroundColor(green)

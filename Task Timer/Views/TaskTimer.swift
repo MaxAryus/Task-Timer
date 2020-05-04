@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+var workedTime: Int = UserDefaults.standard.integer(forKey: "workedTime")
+
 struct TaskTimer: View {
     
 //  MARK: - Properties
@@ -39,7 +41,7 @@ struct TaskTimer: View {
                 }
                 
                 Spacer()
-                Text("\(workedTime) Minutes \n worked today")
+                Text("\(UserDefaults.standard.integer(forKey: "workedTime")) Minutes \n worked")
                     .multilineTextAlignment(.center)
                     .lineLimit(3)
                     .padding(.trailing)
@@ -98,6 +100,8 @@ struct TaskTimer: View {
                 
             }.padding([.trailing, .leading], 20)
             
+        }.onAppear() {
+            
         }
     }
     
@@ -146,8 +150,8 @@ struct TaskTimer: View {
             self.sliderValue = 5
             self.timerIsRunning = false
             self.showSlider = true
-            self.workedTime += self.upcommingWorkingTime!
-            UserDefaults.standard.set(self.workedTime, forKey: "workedTime")
+            workedTime += self.upcommingWorkingTime!
+            UserDefaults.standard.set(workedTime, forKey: "workedTime")
             self.upcommingWorkingTime = 0
         }
     }
