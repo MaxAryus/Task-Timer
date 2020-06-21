@@ -29,7 +29,7 @@ struct AddTaskSheet: View {
                         if edit {
                             self.edetingMode = true
                         } else {
-                            self.edetingMode = false
+                             self.edetingMode = false
                         }
                     })
                         .padding(.leading)
