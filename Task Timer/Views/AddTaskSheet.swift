@@ -22,7 +22,7 @@ struct AddTaskSheet: View {
     var body: some View {
         ZStack {
             VStack {
-                
+
                 HStack {
                     TextField("Some text", text: self.$newTitle, onEditingChanged: {
                         edit in

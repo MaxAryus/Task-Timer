@@ -12,9 +12,6 @@
 		E449109F244235CE00221E54 /* AddTaskSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E449109E244235CE00221E54 /* AddTaskSheet.swift */; };
 		E49D72882440A20400449E2A /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49D72872440A20400449E2A /* MenuButton.swift */; };
 		E4A305CB243D42C9007A29D6 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A305CA243D42C9007A29D6 /* MenuView.swift */; };
-		E4A9A5D024369FEA00F0A2E9 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A9A5CD24369FEA00F0A2E9 /* Nunito-Bold.ttf */; };
-		E4A9A5D124369FEA00F0A2E9 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A9A5CE24369FEA00F0A2E9 /* Nunito-ExtraLight.ttf */; };
-		E4A9A5D224369FEA00F0A2E9 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A9A5CF24369FEA00F0A2E9 /* Nunito-SemiBold.ttf */; };
 		E4C37EBD2436631F004D4F95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37EBC2436631F004D4F95 /* AppDelegate.swift */; };
 		E4C37EBF2436631F004D4F95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37EBE2436631F004D4F95 /* SceneDelegate.swift */; };
 		E4C37EC22436631F004D4F95 /* Task_Timer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4C37EC02436631F004D4F95 /* Task_Timer.xcdatamodeld */; };
@@ -54,9 +51,6 @@
 		E449109E244235CE00221E54 /* AddTaskSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskSheet.swift; sourceTree = "<group>"; };
 		E49D72872440A20400449E2A /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		E4A305CA243D42C9007A29D6 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		E4A9A5CD24369FEA00F0A2E9 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Bold.ttf"; path = "../../../../Downloads/Nunito/Nunito-Bold.ttf"; sourceTree = "<group>"; };
-		E4A9A5CE24369FEA00F0A2E9 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-ExtraLight.ttf"; path = "../../../../Downloads/Nunito/Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
-		E4A9A5CF24369FEA00F0A2E9 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-SemiBold.ttf"; path = "../../../../Downloads/Nunito/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		E4C37EB92436631F004D4F95 /* Task Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C37EBC2436631F004D4F95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4C37EBE2436631F004D4F95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,9 +164,6 @@
 		E4C37EFE243665EB004D4F95 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				E4A9A5CD24369FEA00F0A2E9 /* Nunito-Bold.ttf */,
-				E4A9A5CE24369FEA00F0A2E9 /* Nunito-ExtraLight.ttf */,
-				E4A9A5CF24369FEA00F0A2E9 /* Nunito-SemiBold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -322,11 +313,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4A9A5D224369FEA00F0A2E9 /* Nunito-SemiBold.ttf in Resources */,
 				E4C37ECC24366322004D4F95 /* LaunchScreen.storyboard in Resources */,
-				E4A9A5D024369FEA00F0A2E9 /* Nunito-Bold.ttf in Resources */,
 				E4C37EC624366322004D4F95 /* Assets.xcassets in Resources */,
-				E4A9A5D124369FEA00F0A2E9 /* Nunito-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
