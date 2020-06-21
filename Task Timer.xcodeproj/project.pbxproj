@@ -10,6 +10,7 @@
 		E43F41412443353100989E85 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F41402443353100989E85 /* ListViewModel.swift */; };
 		E43F41442443369900989E85 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F41432443369900989E85 /* TaskViewModel.swift */; };
 		E449109F244235CE00221E54 /* AddTaskSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E449109E244235CE00221E54 /* AddTaskSheet.swift */; };
+		E463CF51249FB0B7005B3C78 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E463CF50249FB0B7005B3C78 /* OpenSans-Regular.ttf */; };
 		E49D72882440A20400449E2A /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49D72872440A20400449E2A /* MenuButton.swift */; };
 		E4A305CB243D42C9007A29D6 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A305CA243D42C9007A29D6 /* MenuView.swift */; };
 		E4C37EBD2436631F004D4F95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C37EBC2436631F004D4F95 /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		E43F41402443353100989E85 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		E43F41432443369900989E85 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		E449109E244235CE00221E54 /* AddTaskSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskSheet.swift; sourceTree = "<group>"; };
+		E463CF50249FB0B7005B3C78 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		E49D72872440A20400449E2A /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		E4A305CA243D42C9007A29D6 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		E4C37EB92436631F004D4F95 /* Task Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 		E4C37EFE243665EB004D4F95 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				E463CF50249FB0B7005B3C78 /* OpenSans-Regular.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C37ECC24366322004D4F95 /* LaunchScreen.storyboard in Resources */,
+				E463CF51249FB0B7005B3C78 /* OpenSans-Regular.ttf in Resources */,
 				E4C37EC624366322004D4F95 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

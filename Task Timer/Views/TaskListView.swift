@@ -37,11 +37,6 @@ struct TaskListView: View {
                     }
                 }
                 .padding(.top, 10)
-                
-//                HStack {
-//                    if self.taskListVM.tasks.count == -1 {
-//                        Text("No tasks 😁").background(green)
-//                    } else {
                         List {
                             ForEach(self.taskListVM.tasks, id: \.id) { item in
                                 HStack {
@@ -72,7 +67,7 @@ struct TaskListView: View {
                     if success {
                         self.taskListVM.fetchAllTasks()
                     }
-                }).transition(.move(edge: .bottom)).padding(.top, 100)
+                }).transition(.move(edge: .bottom)).padding(.top, 100).shadow(color: Color(red: 214/255, green: 214/255, blue: 214/255), radius: 6, x: 0, y: -8)
                 
             }
         }

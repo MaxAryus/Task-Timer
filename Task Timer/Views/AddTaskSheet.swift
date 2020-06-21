@@ -35,21 +35,22 @@ struct AddTaskSheet: View {
                         .padding(.leading)
                         .padding([.bottom,.top], 10)
                         .background(colorScheme == .dark ? gray : Color.white)
-                        .cornerRadius(20)
+                        
                         .multilineTextAlignment(.leading)
                         .font(.custom("Nunito-SemiBold", size: 16))
                     
-                    }.padding([.trailing, .leading], 40).padding([.top, .bottom]).shadow(color: gray, radius: 6, x: 0, y: 3)
+                    }.padding([.trailing, .leading], 40).padding([.top, .bottom]).shadow(color: Color(red: 214/255, green: 214/255, blue: 214/255), radius: 6, x: 0, y: 8)
+                .padding(.top, 30)
                 
                 HStack {
                     
                     Button(action: {
                         self.saveTask()
                     }) {
-                        Text("Add task")
+                        Text("Save")
                             .foregroundColor(gray)
                             .multilineTextAlignment(.center)
-                            .font(.custom("Nunito-Bold", size: 20))
+                            .font(.custom("OpenSans-Regular", size: 20))
                     }
                     
                     
@@ -59,7 +60,7 @@ struct AddTaskSheet: View {
                 
                 Spacer()
                 
-            }.background(blue.opacity(0.8))
+            }.background(Color.white)
                 
             
         }.edgesIgnoringSafeArea(.all)
@@ -68,6 +69,7 @@ struct AddTaskSheet: View {
             
             .offset(y: edetingMode ? -150 : 55)
             .animation(.default)
+        
     }
             
     
