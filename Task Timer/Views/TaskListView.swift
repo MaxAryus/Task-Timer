@@ -61,15 +61,23 @@ struct TaskListView: View {
                     }
                 }.shadow(color: .gray, radius: 6, x: 0, y: 3)
             }
-            if self.showAddTaskSheet {
-                
-                AddTaskSheet(showAddTaskSheet: self.$showAddTaskSheet, onSave: { (success) in
+            .sheet(isPresented: $showAddTaskSheet) {
+                NewTaskViewModle { (success) in
                     if success {
                         self.taskListVM.fetchAllTasks()
                     }
-                }).transition(.move(edge: .bottom)).padding(.top, 100).shadow(color: Color(red: 214/255, green: 214/255, blue: 214/255), radius: 6, x: 0, y: -8)
-                
+                }
             }
+//            if self.showAddTaskSheet {
+//                
+//                NewTaskViewModle(isHidden: self.showAddTaskSheet, onSave: { (success) in
+//                    if success {
+//                        self.taskListVM.fetchAllTasks()
+//                    }
+//                }).transition(.move(edge: .bottom)).padding(.top, 100).shadow(color: Color(red: 214/255, green: 214/255, blue: 214/255), radius: 6, x: 0, y: -8)
+//                
+//            }
+            
         }
 
     }

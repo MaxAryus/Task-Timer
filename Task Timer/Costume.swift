@@ -15,7 +15,8 @@ import SwiftUI
     let black   = Color(red: 33/255, green: 33/255, blue: 33/255)
     let gray    = Color(red: 112/255, green: 112/255, blue: 112/255)
     let shadow  = Color(red: 0/255, green: 0/255, blue: 0/255)
-    
+    let taskViewGray  = Color(red: 215/255, green: 215/255, blue: 215/255)
+
     var timer   = Timer()
     let seconds = 1
     let minutes = 60

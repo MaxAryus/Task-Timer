@@ -10,6 +10,7 @@
 		E43F41412443353100989E85 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F41402443353100989E85 /* ListViewModel.swift */; };
 		E43F41442443369900989E85 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F41432443369900989E85 /* TaskViewModel.swift */; };
 		E449109F244235CE00221E54 /* AddTaskSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E449109E244235CE00221E54 /* AddTaskSheet.swift */; };
+		E45E267424A0A9A200EC31C8 /* NewTaskViewModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E267324A0A9A200EC31C8 /* NewTaskViewModle.swift */; };
 		E463CF51249FB0B7005B3C78 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E463CF50249FB0B7005B3C78 /* OpenSans-Regular.ttf */; };
 		E49D72882440A20400449E2A /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49D72872440A20400449E2A /* MenuButton.swift */; };
 		E4A305CB243D42C9007A29D6 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A305CA243D42C9007A29D6 /* MenuView.swift */; };
@@ -50,6 +51,7 @@
 		E43F41402443353100989E85 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		E43F41432443369900989E85 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		E449109E244235CE00221E54 /* AddTaskSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskSheet.swift; sourceTree = "<group>"; };
+		E45E267324A0A9A200EC31C8 /* NewTaskViewModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewModle.swift; sourceTree = "<group>"; };
 		E463CF50249FB0B7005B3C78 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		E49D72872440A20400449E2A /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		E4A305CA243D42C9007A29D6 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				E4D3F6392438B616005F7C1E /* TaskTimer.swift */,
 				E4A305CA243D42C9007A29D6 /* MenuView.swift */,
 				E4DED33F24421C730030EFA4 /* TaskListView.swift */,
+				E45E267324A0A9A200EC31C8 /* NewTaskViewModle.swift */,
 				E449109E244235CE00221E54 /* AddTaskSheet.swift */,
 			);
 			path = Views;
@@ -353,6 +356,7 @@
 				E4C37EC22436631F004D4F95 /* Task_Timer.xcdatamodeld in Sources */,
 				E4A305CB243D42C9007A29D6 /* MenuView.swift in Sources */,
 				E49D72882440A20400449E2A /* MenuButton.swift in Sources */,
+				E45E267424A0A9A200EC31C8 /* NewTaskViewModle.swift in Sources */,
 				E4D3F63A2438B616005F7C1E /* TaskTimer.swift in Sources */,
 				E449109F244235CE00221E54 /* AddTaskSheet.swift in Sources */,
 				E4C37EC42436631F004D4F95 /* ContentView.swift in Sources */,

@@ -16,7 +16,7 @@ struct AddTaskSheet: View {
     
     
     @State var newTitle: String = ""
-    @Binding var showAddTaskSheet: Bool
+//    @Binding var showAddTaskSheet: Bool
     var onSave:(_ success: Bool) -> Void
     
     var body: some View {
@@ -67,7 +67,7 @@ struct AddTaskSheet: View {
         
         .cornerRadius(20)
             
-            .offset(y: edetingMode ? -150 : 55)
+            
             .animation(.default)
         
     }
@@ -82,7 +82,7 @@ struct AddTaskSheet: View {
         
         vm.saveTask{
             self.newTitle = ""
-            self.showAddTaskSheet = false
+//            self.showAddTaskSheet = false
             self.onSave(true)
         }
         
